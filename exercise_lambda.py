@@ -11,10 +11,10 @@ calls_dictionary = csv.DictReader(file)
 calls_list = list(calls_dictionary)
 
 filtered_list = list(filter(lambda row: row['zip_code'] != '0' 
-and row['neighborhood'] != '' 
-and row['totalresponsetime'] != '' 
-and row['dispatchtime'] != '' 
-and row['totaltime'] != '' 
+or row['neighborhood'] != '' 
+or row['totalresponsetime'] != '' 
+or row['dispatchtime'] != '' 
+or row['totaltime'] != '' 
 , calls_list))
 
 #average total response time
